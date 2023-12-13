@@ -1,0 +1,11 @@
+[Unit]
+Description=A test app
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/opt/lesson6
+ExecStart=/usr/bin/python3 example.py
+
+[Install]
+workedBy=multi-user.target

@@ -1,0 +1,12 @@
+[Unit]
+Description=Server is running
+Afternetwork.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/lesson6
+ExecStart=/usr/bin/gunicorn --workers 3 --bind unix:app.sock wsgi:app
+
+[Install]
+WantedBy=multi-user.target
