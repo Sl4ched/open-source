@@ -1,6 +1,6 @@
 [Unit]
 Description=Server is running
-Afternetwork.target
+After=network.target
 
 [Service]
 User=www-data
